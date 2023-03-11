@@ -17,18 +17,26 @@
             </div>
 
             <label class="form-label">Fecha</label>
-            <div class="input-group mb-3">
+            <div id="Date" class="input-group mb-3">
                 <InputDate @bind-Value="aporte.Fecha" class="form-control" />
             </div>
 
             <label class="form-label">No. Persona</label>
-            <InputNumber @bind-Value="aporte.PersonaId" class="form-control" ></InputNumber>
-
-            <label class="form-label">Descripcion</label>
-            <InputText @bind-Value="aporte.Concepto" class="form-control"></InputText>
-
-            <label class="form-label">Monto</label>
-            <InputNumber @bind-Value="aporte.Monto" class="form-control"></InputNumber>
+            <div id="people">
+                <InputNumber @bind-Value="aporte.PersonaId" class="form-control" ></InputNumber>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Descripcion</label>
+                    <InputText id="Descripcion" @bind-Value="aporte.Concepto" class="form-control"></InputText>
+                </div>
+            
+                <div class="col-md-6">
+                    <label class="form-label">Monto</label>
+                    <InputNumber id="Monto" @bind-Value="aporte.Monto" class="form-control"></InputNumber>
+                </div>
+            </div>
+            
         </div>
 
         <div class="card-footer">
