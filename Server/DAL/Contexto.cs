@@ -4,10 +4,6 @@ public class Contexto : DbContext
     {
         
     }
-    public DbSet<Aporte> Aporte { get; set; }
-    public DbSet<Personas> Personas { get; set; }
-    public DbSet<TiposAportes> TiposAportes { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Aporte>().HasData(
@@ -56,4 +52,7 @@ public class Contexto : DbContext
             }
         );
     }
+    public DbSet<Aporte> Aporte { get; set; }
+    public DbSet<Personas> Personas { get; set; }
+    public DbSet<TiposAportes> TiposAportes { get; set; }
 }
