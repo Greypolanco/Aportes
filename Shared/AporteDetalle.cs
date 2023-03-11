@@ -6,13 +6,13 @@ public class AporteDetalle
     public int Id { get; set; } 
     public int TipoAporteId { get; set; } 
     public float Valor { get; set; } 
-    public Personas Persona { get; set; } 
+    public Personas Persona { get; set; } = new Personas();
 
     [ForeignKey("TipoAporteId")] 
-    public TiposAportes TiposAporte { get; set; } 
+    public TiposAportes TiposAporte { get; set; } = new TiposAportes();
 
 
-    public AporteDetalle(int tipoId, float valor, Personas persona, TiposAportes tipo) 
+    /*public AporteDetalle(int tipoId, float valor, Personas persona, TiposAportes tipo) 
     { 
         Id = 0; 
         TipoAporteId = tipoId; 
@@ -20,5 +20,5 @@ public class AporteDetalle
         Persona = persona; 
         TiposAporte = tipo; 
 
-    } 
+    } */
 }
