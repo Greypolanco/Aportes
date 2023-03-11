@@ -1,0 +1,45 @@
+@page "/aporte"
+
+
+<EditForm Model="aporte">
+    <DataAnnotationsValidator />
+    <div class ="card">
+
+        <div class="card-header">
+            <h1>Registro Aportes</h1>
+        </div>
+
+        <div class="card-body">
+            <label class="form-label">No. Aporte</label>
+            <div id="Search">
+                <InputNumber @bind-Value="aporte.AporteId" class="form-control" id="texto" />
+                <button type="button" class="btn btn-info oi oi-magnifying-glass"></button><br>
+            </div>
+
+            <label class="form-label">Fecha</label>
+            <div class="input-group mb-3">
+                <InputDate @bind-Value="aporte.Fecha" class="form-control" />
+            </div>
+
+            <label class="form-label">No. Persona</label>
+            <InputNumber @bind-Value="aporte.PersonaId" class="form-control" ></InputNumber>
+
+            <label class="form-label">Descripcion</label>
+            <InputText @bind-Value="aporte.Concepto" class="form-control"></InputText>
+
+            <label class="form-label">Monto</label>
+            <InputNumber @bind-Value="aporte.Monto" class="form-control"></InputNumber>
+        </div>
+
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary">Nuevo</button>
+            <button type="button" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+        </div>
+    </div>
+</EditForm>
+
+@code
+{
+    public Aporte aporte { get; set; } = new Aporte();
+}
