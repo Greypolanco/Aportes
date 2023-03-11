@@ -1,0 +1,11 @@
+
+.card{
+    width: 700px;
+}
+
+#Search{
+    display: flex;
+}
+#Search input{
+    width: 150px;
+}
