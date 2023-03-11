@@ -1,11 +1,27 @@
-
 .card{
-    width: 700px;
+    width: 600px;
 }
 
 #Search{
     display: flex;
 }
+
 #Search input{
     width: 150px;
+}
+
+#Date{
+    width: 250px;
+}
+
+#people{
+    width: 150px;
+}
+
+#Descripcion{
+    width: 250px;
+}
+
+#Monto{
+    width: 250px;
 }
